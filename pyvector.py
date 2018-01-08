@@ -8,7 +8,10 @@ class Vector:
         self.x = x
         self.y = y
         self.z = z
-
+    def __str__(self):
+        print("Vector with coordinates x="+self.x+", y="+self.y+", z="+self.z)
+    __repr__ = __str__
+    
     def assign(self, x, y=None, z=None):
         if type(y) is None and type(z) is None:
             if type(x) is Vector:
