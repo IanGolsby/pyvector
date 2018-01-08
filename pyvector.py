@@ -1,3 +1,5 @@
+#   PyVector is a Python module to handle vector math in 2 and 3 dimensions.
+
 import numpy                # I might need this later
 import random
 import math
@@ -12,6 +14,7 @@ class Vector:
         print("Vector with coordinates x="+self.x+", y="+self.y+", z="+self.z)
     __repr__ = __str__
     
+    # Assign custom values to a vector
     def assign(self, x, y=None, z=None):
         if type(y) is None and type(z) is None:
             if type(x) is Vector:
@@ -32,19 +35,33 @@ class Vector:
                 self.y = y
                 self.z = z
         return self
-    def random2D():
+    
+    # Returns a unit vector with random coordinates in two dimensions (z=0)
+    def random2D(self):
         theta = random.uniform(0, 2*math.pi)
         x = math.cos(theta)
         y = math.sin(theta)
         return Vector(x, y, 0)
-    def random3D():
+   
+    # Returns a unit vector with random coordinates in three dimensions
+    def random3D(self):
         base = random2D()
         theta = random.uniform(0, 2*math.pi)
         z = math.sin(theta)
         x = base[0]*math.cos(theta)
         y = base[1]*math.cos(theta)
         return Vector(x, y, z)
-    def fromAngle(angle):
+    
+    # Returns a unit vector at a specified angle in radians
+    def fromAngle(self, angle):
         x = math.cos(angle)
         y = math.sin(angle)
         return Vector(x, y, 0)
+
+    # Returns a list containing the x y z values of a Vector
+    def list(self, vector):
+        return [vector.x, vector.y, vector.z]
+    
+    # Returns the magnitude of a vector
+    def mag(self, vector):
+        pass
