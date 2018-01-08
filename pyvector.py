@@ -1,4 +1,6 @@
 import numpy                # I might need this later
+import random
+import math
 
 class Vector:
 
@@ -27,3 +29,8 @@ class Vector:
                 self.y = y
                 self.z = z
         return self
+    def random2D():
+        theta = random.uniform(0, 2*math.pi)
+        x = math.cos(theta)
+        y = math.sin(theta)
+        return Vector(x, y, 0)
