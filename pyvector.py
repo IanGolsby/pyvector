@@ -115,3 +115,19 @@ class Vector:
             else:
                 raise TypeError("Expected three numerical inputs")
         return Vector(self.x, self.y, self.z)
+    
+    # Multiplies vector by a scalar
+    def mult(self, scalar):
+        self.x*=scalar
+        self.y*=scalar
+        self.z*=scalar
+        return Vector(self.x, self.y, self.z)
+    
+    #Divides vector by a scalar
+    def div(self, scalar):
+        self.x/=scalar
+        self.y/=scalar
+        self.z/=scalar
+        return Vector(self.x, self.y, self.z)
+   
+    
