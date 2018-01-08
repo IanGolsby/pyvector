@@ -64,4 +64,7 @@ class Vector:
     def mag(self):
         return math.sqrt(self.x**2+self.y**2+self.z**2)
     
+    # Returns the square of the magnitude of a vector
+    def magSq(self):
+        return self.x*self.x+self.y*self.y+self.z*self.z
     
