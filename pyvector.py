@@ -38,3 +38,6 @@ class Vector:
         base = random2D()
         theta = random.uniform(0, 2*math.pi)
         z = math.sin(theta)
+        x *= math.cos(theta)
+        y *= math.cos(theta)
+        return Vector(x, y, z)
