@@ -41,3 +41,7 @@ class Vector:
         x = base[0]*math.cos(theta)
         y = base[1]*math.cos(theta)
         return Vector(x, y, z)
+    def fromAngle(angle):
+        x = math.cos(angle)
+        y = math.sin(angle)
+        return Vector(x, y, 0)
