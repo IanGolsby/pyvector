@@ -123,11 +123,20 @@ class Vector:
         self.z*=scalar
         return Vector(self.x, self.y, self.z)
     
-    #Divides vector by a scalar
+    # Divides vector by a scalar
     def div(self, scalar):
         self.x/=scalar
         self.y/=scalar
         self.z/=scalar
         return Vector(self.x, self.y, self.z)
    
+    # Calculates distance between two vectors
+    def dist(self, v):
+        if type(v) is Vector:
+            return math.sqrt((self.x-v.x**2)+(self.y-v.y**2)+(self.z-v.z**2))
+        else:
+            raise TypeError("Expected vector, got "+type(v))
     
+    # Returns list representation of a vector
+    def array(self):
+        return [self.x, self.y, self.z]
