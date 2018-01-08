@@ -34,3 +34,7 @@ class Vector:
         x = math.cos(theta)
         y = math.sin(theta)
         return Vector(x, y, 0)
+    def random3D():
+        base = random2D()
+        theta = random.uniform(0, 2*math.pi)
+        z = math.sin(theta)
