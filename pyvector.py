@@ -91,3 +91,27 @@ class Vector:
             else:
                 raise TypeError("Expected three numerical inputs")
         return Vector(self.x, self.y, self.z)
+    
+    # Subtracts things
+    def sub(self, x, y=None, z=None):
+        if type(y) is None and type(z) is None:
+            if type(x) is Vector:
+                self.x-=x.x
+                self.y-=x.y
+                self.z-=x.z
+            else:
+                raise TypeError("Expected single Vector")
+        elif type(z) is None:
+            if (type(x) is int or type(x) is float) and (type(y) is int or type(y) is float):
+                self.x-=x
+                self.y-=y
+            else:
+                raise TypeError("Expected two numerical inputs")
+        else:
+            if (type(x) is int or type(x) is float) and (type(y) is int or type(y) is float) and (type(z) is int or type(z) is float):
+                self.x-=x
+                self.y-=y
+                self.z-=z
+            else:
+                raise TypeError("Expected three numerical inputs")
+        return Vector(self.x, self.y, self.z)
