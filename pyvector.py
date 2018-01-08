@@ -68,3 +68,6 @@ class Vector:
     def magSq(self):
         return self.x*self.x+self.y*self.y+self.z*self.z
     
+    # Adds things
+    def add(x, y=None, z=None):
+        pass
