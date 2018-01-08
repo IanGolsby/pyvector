@@ -57,9 +57,11 @@ class Vector:
         return Vector(x, y, 0)
 
     # Returns a list containing the x y z values of a Vector
-    def list(self, vector):
-        return [vector.x, vector.y, vector.z]
+    def list(self):
+        return [self.x, self.y, self.z]
     
     # Returns the magnitude of a vector
-    def mag(self, vector):
-        pass
+    def mag(self):
+        return math.sqrt(self.x**2+self.y**2+self.z**2)
+    
+    
