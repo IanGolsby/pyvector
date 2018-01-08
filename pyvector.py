@@ -1,8 +1,6 @@
 #   PyVector is a Python module to handle vector math in 2 and 3 dimensions.
 
-import numpy                # I might need this later
-import random
-import math
+import numpy, random, math
 
 class Vector:
 
