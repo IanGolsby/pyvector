@@ -173,4 +173,13 @@ class Vector:
 		else:
 			return self
 	
+	# Returns angle in radians that the Vector is pointing
+	def heading(self):
+		return math.atan2(self.y, self.x)
 	
+	# Rotates a 2D vector by an angle
+	def rotate(self, angle):
+		temp = self.x
+		x = self.x*math.cos(angle)-self.y*math.sin(angle)
+		y = temp*math.sin(angle)+self.y*math.cos(angle)
+		return self
