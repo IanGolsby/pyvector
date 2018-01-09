@@ -152,5 +152,29 @@ class Vector:
     
     # Calculates the dot product of two vectors
     def cross(self, v):
-        return Vector(self.y*v.z-v.y*self.z, self.z*v*x-v.z(self.x, self.x*v.y-v.x*self.y)
+        return Vector(self.y*v.z-v.y*self.z, self.z*v*x-v.z*self.x, self.x*v.y-v.x*self.y)
     
+    # Normalizes vector to a magnitude of one
+    def normalize(self):
+		m = self.mag()
+		self.x/=m
+		self.y/=m
+		self.z/=m
+		return self
+	
+	# Changes vector to have a specified magnitude
+	def setMag(self, m):
+		mr = m/self.mag()
+		self.x*=mr
+		self.y*=mr
+		self.z*=mr
+		return self
+	
+	# Limits vector to a specified magnitude
+	def limit(self, m):
+		if self.mag() > m:
+			return self.setMag(m)
+		else:
+			return self
+	
+	
