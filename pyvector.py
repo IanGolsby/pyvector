@@ -157,17 +157,13 @@ class Vector:
     # Normalizes vector to a magnitude of one
     def normalize(self):
 		m = self.mag()
-		self.x/=m
-		self.y/=m
-		self.z/=m
+		self.div(m)
 		return self
 	
 	# Changes vector to have a specified magnitude
 	def setMag(self, m):
 		mr = m/self.mag()
-		self.x*=mr
-		self.y*=mr
-		self.z*=mr
+		self.mult(mr)
 		return self
 	
 	# Limits vector to a specified magnitude
