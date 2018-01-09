@@ -142,7 +142,7 @@ class Vector:
         return [self.x, self.y, self.z]
 
     # Calculates dot product of two vectors or a vector and 3 components
-    def dot(x, y=None, z=None):
+    def dot(self, x, y=None, z=None):
         if type(x) is Vector:
             return self.x*x.x + self.y*x.y + self.z*x.z
         elif (type(x) is int or type(x) is float) and (type(y) is int or type(y) is float) and (type(z) is int or type(z) is float):
@@ -150,4 +150,7 @@ class Vector:
         else:
             raise TypeError("")
     
+    # Calculates the dot product of two vectors
+    def cross(self, v):
+        return Vector(self.y*v.z-v.y*self.z, self.z*v*x-v.z(self.x, self.x*v.y-v.x*self.y)
     
