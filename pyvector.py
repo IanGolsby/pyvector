@@ -140,3 +140,14 @@ class Vector:
     # Returns list representation of a vector
     def array(self):
         return [self.x, self.y, self.z]
+
+    # Calculates dot product of two vectors or a vector and 3 components
+    def dot(x, y=None, z=None):
+        if type(x) is Vector:
+            return self.x*x.x + self.y*x.y + self.z*x.z
+        elif (type(x) is int or type(x) is float) and (type(y) is int or type(y) is float) and (type(z) is int or type(z) is float):
+            return self.x*x + self.y*y + self.z*z
+        else:
+            raise TypeError("")
+    
+    
